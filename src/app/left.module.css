@@ -1,0 +1,69 @@
+@keyframes moveCircle {
+    from {
+      transform: translateX(-50%) translateY(-50%) scale(1);
+    }
+    to {
+      transform: translateX(-50%) translateY(-100vh) scale(2);
+    }
+  }
+  
+  .blue-animation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: #3b98b9;
+    animation: moveCircle 8s linear infinite;
+    z-index: -1;
+  }
+
+
+  .yellow-animation {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color:#DCE775;
+    animation: moveCircle 8s linear infinite;
+    z-index: -1;
+  }
+
+  @keyframes handWave {
+    0% {
+      transform: rotate(0deg);
+      border: 1px solid red
+    }
+    25% {
+      transform: rotate(2deg);
+      border: 2px solid rgb(7, 11, 236)
+    }
+    50% {
+      transform: rotate(0deg);
+      border: 1px solid red
+    }
+    75% {
+      transform: rotate(-2deg);
+      border: 2px solid rgb(7, 11, 236)
+    }
+    100% {
+      transform: rotate(0deg);
+      border: 1px solid red
+    }
+  }
+  
+  
+  
+
+  
+  .changeColor {
+    border: 1px solid red;
+    animation: handWave 3s linear infinite;
+  }
+  
+  
+
+
