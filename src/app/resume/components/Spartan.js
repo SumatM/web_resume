@@ -43,7 +43,7 @@ const Spartan = () => {
         <div className="mt-2">
           <div className="text-sm">
             <p>
-              Spartan is dedicated to men&aposs fashion, with a focus on formal
+              Spartan is dedicated to men&apos;s fashion, with a focus on formal
               wear.
             </p>
             <p>It is an individual project build in a span of 6 days.</p>
