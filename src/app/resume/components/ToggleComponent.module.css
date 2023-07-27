@@ -1,0 +1,13 @@
+.closed {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: opacity 1s ease, max-height 0.3s ease;
+   
+  }
+  
+  .open {
+    opacity: 1;
+    transition: opacity 1s ease, max-height 0.3s ease;
+  }
+  

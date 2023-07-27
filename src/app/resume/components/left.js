@@ -5,21 +5,19 @@ import { IoLogoLinkedin } from "react-icons/io";
 import { BsGithub } from "react-icons/bs";
 import { IoIosHelpBuoy } from "react-icons/io";
 import styles from "./left.module.css";
+import { useSelector } from "react-redux";
 
-let iconColor = "#8BC34A";
-let textColor = "#827717";
-const boxShadowColor = "#DCE775";
-const animationStyle = `yellow-animation`;
 
 const Left = () => {
+  const theme = useSelector((s)=>s.themeReducer.value)
   return (
     <div className=" basis-1/2   text-left">
-      <div className={styles[`${animationStyle}`]}></div>
+      <div style={{background: theme.iconColor}} className={styles[`${`ball-animation`}`]}></div>
       {/* dp  */}
       <div
         className={styles.appear}
         style={{
-          boxShadow: `20px -20px ${boxShadowColor}`,
+          boxShadow: `20px -20px ${theme.iconColor}`,
           position: "relative",
           width: "60%",
         }}
@@ -28,69 +26,69 @@ const Left = () => {
       </div>
       {/* name & title  */}
       <div className="mt-2">
-        <h1 className="text-3xl font-bold tracking-wide">SUMAT MALLICK</h1>
+        <h1 className="text-4xl font-bold tracking-wide" style={{fontFamily:'monospace',color:theme.LtextColor}}>SUMAT MALLICK</h1>
 
-        <h1 className={`text-sm font-light mt-1 `} style={{ color: textColor }}>
+        <h1 className={`text-sm font-light mt-1 `} style={{ color: theme.LtextColor }}>
           Full Stack Web Developer
         </h1>
       </div>
 
       {/* basic info  */}
       <div>
-        <div className="text-sm">
-          <h1 className="text-xl font-bold tracking-wide mt-3">Contact Me</h1>
+        <div className="text-sm" style={{ color: theme.LtextColor }}>
+          <h1 className="text-xl font-bold tracking-wide mt-3 text-black">Contact Me</h1>
           <div className="mt-1">
             {/* email  */}
             <div className="flex items-center">
               <div className="pr-3">
-                <AiFillMail style={{ color: iconColor }} />
+                <AiFillMail style={{ color: theme.iconColor }} />
               </div>
-              <div style={{ color: textColor }}>
+              <div >
                 <p>Sumatmallick@gmail.com</p>
               </div>
             </div>
             {/* mobile */}
             <div className="flex items-center pt-2">
               <div className="pr-3">
-                <BiSolidPhoneCall size="1.1rem" style={{ color: iconColor }} />
+                <BiSolidPhoneCall size="1.1rem" style={{ color: theme.iconColor }} />
               </div>
-              <div style={{ color: textColor }}>
+              <div>
                 <p>+91-889447615</p>
               </div>
             </div>
             {/* address  */}
             <div className="flex items-center pt-2">
               <div className="pr-3">
-                <MdLocationPin size="1.2rem" style={{ color: iconColor }} />
+                <MdLocationPin size="1.2rem" style={{ color: theme.iconColor }} />
               </div>
-              <div style={{ color: textColor }}>
+              <div >
                 <p>Kendrapara, Odisha</p>
               </div>
             </div>
             {/* linkedin */}
             <div className="flex items-center pt-2">
               <div className="pr-3">
-                <IoLogoLinkedin size="1.2rem" style={{ color: iconColor }} />
+                <IoLogoLinkedin size="1.2rem" style={{ color: theme.iconColor }} />
               </div>
-              <div style={{ color: textColor }}>
+              <div >
                 <p>Sumat Mallick</p>
               </div>
             </div>
             {/* github */}
             <div className="flex items-center pt-2">
               <div className="pr-3">
-                <BsGithub size="1rem" style={{ color: iconColor }} />
+                <BsGithub size="1rem" style={{ color: theme.iconColor }} />
               </div>
-              <div style={{ color: textColor }}>
+              <div >
                 <p>SumatM</p>
               </div>
             </div>
             {/* portfolio */}
             <div className="flex items-center pt-2">
               <div className="pr-3">
-                <IoIosHelpBuoy size="1.1rem" style={{ color: iconColor }} />
+                <IoIosHelpBuoy size="1.1rem" style={{ color: theme.iconColor }} />
               </div>
-              <div style={{ color: textColor }}>
+              <div >
                 <p>Sumat Mallick</p>
               </div>
             </div>
@@ -100,9 +98,9 @@ const Left = () => {
       {/* technical skills  */}
       <div className="text-sm">
         <div>
-          <h1 className="text-xl font-bold tracking-wide mt-5">Tech Stack</h1>
+          <h1 className="text-xl font-bold tracking-wide mt-3" >TECH STACK</h1>
         </div>
-        <div className="flex mt-1" style={{ color: textColor }}>
+        <div className="flex mt-1" style={{ color: theme.LtextColor }}>
           <div>
             <ul className="list-disc list-inside">
               <li>HTML</li>
@@ -126,10 +124,10 @@ const Left = () => {
       {/* soft skills  */}
       <div className="text-sm">
         <div>
-          <h1 className="text-xl font-bold tracking-wide mt-5 ">Soft Skills</h1>
+          <h1 className="text-xl font-bold tracking-wide mt-5 " >SOFT SKILLS</h1>
         </div>
         <div className="mt-1">
-          <div style={{ color: textColor }}>
+          <div style={{ color: theme.LtextColor }}>
             <ul className="list-disc list-inside">
               <li>Creativity</li>
               <li>Communication</li>
@@ -142,10 +140,10 @@ const Left = () => {
       </div>
 
       {/* experience  */}
-      <div className="text-sm">
+      <div className="text-sm" >
         <div>
           <h1 className="text-xl font-bold tracking-wide mt-5 ">
-            Professional Experience
+            PROFESSIONAL EXPERIENCE
           </h1>
         </div>
         <div>
@@ -155,14 +153,14 @@ const Left = () => {
             <h1 className="text-xs font-bold ">
               Accounts Receivable Executive
             </h1>
-            <h2 className="text-xs italic" style={{ color: textColor }}>
+            <h2 className="text-xs italic" style={{ color: theme.LtextColor }}>
               March, 2021 - May, 2022
             </h2>
           </div>
           {/* responsiblity  */}
           <div className="mt-1">
             <h1 className="text-base font-bold ">Responsibility</h1>
-            <ul className="list-disc list-inside" style={{ color: textColor }}>
+            <ul className="list-disc list-inside" style={{ color: theme.LtextColor }}>
               <li>Managing customer invoices.</li>
               <li>Ensuring timely and accurate payments.</li>
             </ul>

@@ -1,0 +1,49 @@
+/* Modal styles */
+.modal-overlay {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  width: 20vw;
+  align-items: center;
+  z-index: 80;
+}
+
+.modal {
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+h2 {
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.color-picker {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.color-option {
+  width: 40px;
+  height: 40px;
+  margin: 5px;
+  cursor: pointer;
+  border-radius: 14px;
+}
+
+.button1 {
+  margin-top: 1.2rem;
+  font-weight: bold;
+}
+.button2 {
+  font-weight: bold;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  border: 1px solid gray;
+  padding: 5px;
+  margin-top: 10px;
+}
