@@ -13,10 +13,10 @@ export default function Home() {
 
   useEffect(() => {
     let loadingBar = document.querySelector('.mainContainer');
-    // window.scrollTo(0, 0);
-    // setTimeout(()=>{
-    //   setflag(false)
-    // },2000)   
+    window.scrollTo(0, 0);
+    setTimeout(()=>{
+      setflag(false)
+    },2000)   
   }, []);
 
 
