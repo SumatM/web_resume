@@ -7,7 +7,6 @@ import { useDispatch, useSelector } from "react-redux";
 
 const Modal = () => {
   const [showModal, setShowModal] = useState(false);
-  const [selectedColor, setSelectedColor] = useState("#ffffff");
   const theme = useSelector((s) => s.themeReducer.value);
   const dispatch = useDispatch();
   const colors = [
@@ -58,8 +57,9 @@ const Modal = () => {
   ];
 
   const handleColorChange = (color, index) => {
-    setSelectedColor(color);
+    localStorage.setItem('resume',JSON.stringify({...theme}))
     dispatch(changeTheme(themes[index]));
+    console.log(color);
   };
 
   return (

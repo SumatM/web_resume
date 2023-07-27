@@ -6,7 +6,7 @@ const { createSlice } = require("@reduxjs/toolkit");
 const themeSlice = createSlice({
   name: "theme",
   initialState: {
-   value: getLocalFile('resume')?.theme || { LtextColor: "#7B1FA2",
+   value: getLocalFile('resume') || { LtextColor: "#7B1FA2",
    RtextColor:"#00897B",
    iconColor: "#607D8B",
    backgroundTheme: "#FFA000"}
