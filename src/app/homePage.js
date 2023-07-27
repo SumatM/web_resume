@@ -3,7 +3,7 @@ import Right from "./right";
 
 const HomePage = () => {
   return (
-    <div className="flex p-8 relative mt-[3rem] z-50">
+    <div className="flex pl-10 pr-10 pb-10 relative mt-[3rem] z-50">
       {/* left  */}
       <Left />
       {/* right  */}

@@ -4,7 +4,7 @@ const backgroundTheme = "#FFA726"
 
 export default function Home() {
   return (
-    <div className="w-[60vw] m-auto h-[200vh] border-2 border-black">
+    <div className="w-[60vw] m-auto  border-2 border-black">
       <div
         style={{
           clipPath:
