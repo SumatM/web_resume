@@ -21,20 +21,28 @@
     }
   }
   
-  h1 span {
+  .loadingWord {
     display: inline-block;
     animation: fadeInLetter 1s ease-in-out infinite;
-    opacity: 0;
+    font-weight: lighter;
+
   }
   
   @keyframes fadeInLetter {
     0% {
-      opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(30px);
+      filter: blur(1px);
+      color: red;
+    }
+    50%{
+      color: rgb(167, 216, 22);
+      font-weight: bolder;
     }
     100% {
       opacity: 1;
       transform: translateY(0);
+      color: rgb(60, 243, 60);
+      font-weight: bolder;
     }
   }
   

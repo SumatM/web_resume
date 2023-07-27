@@ -2,7 +2,6 @@ import { getLocalFile } from "./helper";
 
 const { createSlice } = require("@reduxjs/toolkit");
 
-console.log(getLocalFile('resume'))
 
 const themeSlice = createSlice({
   name: "theme",
