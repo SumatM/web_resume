@@ -2,16 +2,19 @@
 import { useState } from "react";
 import styles from "./ToggleComponent.module.css";
 import { AiFillDownCircle, AiFillUpCircle } from "react-icons/ai";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { handleTrigger } from "@/redux/themeReducer";
 
 let iconColor = "#DCE775";
 
 const ToggleComponent = ( { heading, val }) => {
   const [isOpen, setIsOpen] = useState(false);
   const theme = useSelector((s) => s.themeReducer.value);
+  const dispatch = useDispatch();
 
   const handleToggle = () => {
     setIsOpen(!isOpen);
+    dispatch(handleTrigger())
   };
 
   return (
@@ -20,9 +23,9 @@ const ToggleComponent = ( { heading, val }) => {
         <div className="text-sm font-bold flex">
           <div className="pr-2">
             {!isOpen ? (
-              <AiFillDownCircle color={theme.iconColor} size="20px" />
+              <AiFillDownCircle title="See More" color={theme.iconColor} size="20px" />
             ) : (
-              <AiFillUpCircle  color={theme.iconColor} size="20px" />
+              <AiFillUpCircle title='See Less' color={theme.iconColor} size="20px" />
             )}{" "}
           </div>
 

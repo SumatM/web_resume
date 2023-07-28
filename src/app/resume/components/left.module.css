@@ -33,7 +33,7 @@
 }
 
 .appear {
-  animation: vanishAndReappear 1s ease 2s;
+  cursor: pointer;
+  animation: vanishAndReappear 1s ease 3s;
 }
-
 

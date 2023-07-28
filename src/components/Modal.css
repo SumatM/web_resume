@@ -39,6 +39,9 @@ h2 {
 .button1 {
   margin-top: 1.2rem;
   font-weight: bold;
+  padding: 5px;
+  border: 2px solid gray;
+  color: white;
 }
 .button2 {
   font-weight: bold;

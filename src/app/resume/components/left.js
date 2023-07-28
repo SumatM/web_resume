@@ -22,7 +22,9 @@ const Left = () => {
           width: "60%",
         }}
       >
-        <img src="/dp.png" alt="sumat" className="object-contain" />
+        <div>
+        <img src="/dp.png" alt="sumat" className="object-contain dpimg" />
+        </div>
       </div>
       {/* name & title  */}
       <div className="mt-2">

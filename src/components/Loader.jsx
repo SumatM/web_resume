@@ -7,7 +7,7 @@ const Loader = () => {
   return (
     <div className='mainContainer'>
       <div>
-        <Image src={loadingLogo} alt="logo" width={200} priority />
+        <Image src={loadingLogo} alt="logo" width={150} priority />
       </div>
       <div>
           <h1 className='loadingWord'>Loading...</h1>

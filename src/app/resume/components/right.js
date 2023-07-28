@@ -24,15 +24,48 @@ const Right = () => {
           </p>
         </div>
       </div>
-
-      <div style={{color:theme.backgroundTheme}} className={styles[`${`cube-container`}`]}>
-        <div className={styles.cube} >
-          <div style={{background:theme.iconColor}} className={`${face} ${styles.front}`}>HTML</div>
-          <div style={{background:theme.iconColor}} className={`${face} ${styles.back}`}>Node.js</div>
-          <div style={{background:theme.iconColor}} className={`${face} ${styles.top}`}>JavaScript</div>
-          <div style={{background:theme.iconColor}} className={`${face} ${styles.bottom}`}>React.js</div>
-          <div style={{background:theme.iconColor}} className={`${face} ${styles.left}`}>MongoDB</div>
-          <div style={{background:theme.iconColor}} className={`${face} ${styles.right}`}>Express</div>
+      {/* animation box  */}
+      <div
+        style={{ color: theme.backgroundTheme }}
+        className={styles[`${`cube-container`}`]}
+      >
+        <div className={styles.cube}>
+          <div
+            style={{ background: theme.iconColor }}
+            className={`${face} ${styles.front}`}
+          >
+            HTML
+          </div>
+          <div
+            style={{ background: theme.iconColor }}
+            className={`${face} ${styles.back}`}
+          >
+            Node.js
+          </div>
+          <div
+            style={{ background: theme.iconColor }}
+            className={`${face} ${styles.top}`}
+          >
+            JavaScript
+          </div>
+          <div
+            style={{ background: theme.iconColor }}
+            className={`${face} ${styles.bottom}`}
+          >
+            React.js
+          </div>
+          <div
+            style={{ background: theme.iconColor }}
+            className={`${face} ${styles.left}`}
+          >
+            MongoDB
+          </div>
+          <div
+            style={{ background: theme.iconColor }}
+            className={`${face} ${styles.right}`}
+          >
+            Express
+          </div>
         </div>
       </div>
       {/* education  */}
@@ -49,7 +82,9 @@ const Right = () => {
           </div>
           {/* bsc  */}
           <div style={{ color: theme.RtextColor }} className="mt-1">
-            <h1 className="text-base font-bold text-white">B.Sc. Chemistry Hounours</h1>
+            <h1 className="text-base font-bold text-white">
+              B.Sc. Chemistry Hounours
+            </h1>
             <p className="text-xs font-bold  ">Himachal Pradesh University</p>
             <p className="text-xs italic">June, 2013 - May, 2016</p>
           </div>

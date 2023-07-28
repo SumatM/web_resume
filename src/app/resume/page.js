@@ -3,38 +3,44 @@ import HomePage from "@/app/resume/components/homePage";
 import Loader from "@/components/Loader";
 import Modal from "@/components/Modal";
 import { getLocalFile } from "@/redux/helper";
-import { useEffect, useState } from "react";
-import {  useSelector } from "react-redux";
+import { handleLoading } from "@/redux/themeReducer";
+import { useEffect, useRef, useState } from "react";
+import { useDispatch, useSelector } from "react-redux";
 
 export default function Home() {
   const [height, setheight] = useState(1000);
   const [width, setWidth] = useState(500);
   const theme = useSelector((s) => s.themeReducer.value);
-  const [flag, setflag] = useState(true);
+  const pageRef = useRef(null);
+  const dispatch = useDispatch();
 
   useEffect(() => {
-    const heightdoc = document.getElementById("homepage");
-    setheight(heightdoc.offsetHeight - 2);
-    setWidth(heightdoc.offsetWidth - 2);
+    window.scrollTo(0, 0);;
+    dispatch(handleLoading(false));
     if (!getLocalFile("resume")) {
       localStorage.setItem("resume", JSON.stringify({ ...theme }));
     }
-  }, [theme]);
+  }, []);
 
   useEffect(() => {
-    window.scrollTo(0, 0);
-    setTimeout(() => {
-      setflag(false);
-    }, 2000);
-  }, []);
+    setheight(pageRef.current.offsetHeight - 2);
+    setWidth(pageRef.current.offsetWidth - 2);
+    window.addEventListener("resize", handleResize);
+  }, [theme?.triggerFortoggler]);
+
+
+  function handleResize() {
+    setheight(pageRef.current.offsetHeight - 2);
+    setWidth(pageRef.current.offsetWidth - 2);
+  }
 
   return (
     <div>
-      {flag && <Loader />}
+      {theme?.isLoading && <Loader />}
       <div
-        id="homepage"
-        className="w-[60vw] m-auto  border-2 border-black overflow-hidden"
-        style={{ visibility: flag ? "collapse" : "visible" }}
+        ref={pageRef}
+        className=" m-auto  border-2 border-black overflow-hidden sm:w-[99vw] md:w-[90vw] lg:w-[80vw] xl:w-[70vw]"
+        style={{ visibility: theme?.isLoading ? "collapse" : "visible" }}
       >
         <div
           style={{
