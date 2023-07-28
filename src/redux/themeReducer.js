@@ -10,7 +10,6 @@ const themeSlice = createSlice({
       RtextColor: "#FBC02D",
       iconColor: "#D32F2F",
       backgroundTheme: "#212121",
-      isLoading: true,
       triggerFortoggler: true,
     },
   },

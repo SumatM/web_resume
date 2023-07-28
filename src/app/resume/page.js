@@ -11,13 +11,14 @@ export default function Home() {
   const [height, setheight] = useState(1000);
   const [width, setWidth] = useState(500);
   const theme = useSelector((s) => s.themeReducer.value);
+  const [isLoading,setIsloading] = useState(true)
   const pageRef = useRef(null);
   const dispatch = useDispatch();
 
   useEffect(() => {
     window.scrollTo(0, 0);
     setTimeout(() => {
-      dispatch(handleLoading(false));
+      setIsloading(false)
     }, 2000);
     if (!getLocalFile("resume")) {
       localStorage.setItem("resume", JSON.stringify({ ...theme }));
@@ -37,11 +38,11 @@ export default function Home() {
 
   return (
     <div>
-      {theme?.isLoading && <Loader />}
+      {isLoading && <Loader />}
       <div
         ref={pageRef}
         className=" m-auto  border-2 border-black overflow-hidden sm:w-[99vw] md:w-[90vw] lg:w-[80vw] xl:w-[70vw]"
-        style={{ visibility: theme?.isLoading ? "collapse" : "visible" }}
+        style={{ visibility: isLoading ? "collapse" : "visible" }}
       >
         <div
           style={{
