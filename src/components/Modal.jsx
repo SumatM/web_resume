@@ -12,7 +12,6 @@ const Modal = () => {
   const dispatch = useDispatch();
 
   const handleColorChange = (color, index) => {
-    localStorage.setItem("resume", JSON.stringify({ ...themes[index] }));
     dispatch(changeTheme(themes[index]));
   };
 

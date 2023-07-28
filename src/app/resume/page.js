@@ -15,8 +15,10 @@ export default function Home() {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    window.scrollTo(0, 0);;
-    dispatch(handleLoading(false));
+    window.scrollTo(0, 0);
+    setTimeout(() => {
+      dispatch(handleLoading(false));
+    }, 2000);
     if (!getLocalFile("resume")) {
       localStorage.setItem("resume", JSON.stringify({ ...theme }));
     }
@@ -27,7 +29,6 @@ export default function Home() {
     setWidth(pageRef.current.offsetWidth - 2);
     window.addEventListener("resize", handleResize);
   }, [theme?.triggerFortoggler]);
-
 
   function handleResize() {
     setheight(pageRef.current.offsetHeight - 2);

@@ -2,6 +2,8 @@ import { Spartan } from "./Spartan";
 import { Arivu } from "./Arivu";
 import { useSelector } from "react-redux";
 import styles from "./right.module.css";
+import {FaDownload} from 'react-icons/fa'
+import Link from "next/link";
 
 const Right = () => {
   const theme = useSelector((s) => s.themeReducer.value);
@@ -106,6 +108,17 @@ const Right = () => {
           {/* Arivu  */}
           <Arivu />
         </div>
+      </div>
+      {/* dowonload resume  */}
+      <div className="flex justify-center absolute top-0 right-10">
+       <Link target="_blank"  href="https://drive.google.com/file/d/1ni4YYEIFx2EWl7TNt-B8ymbVc5wmK7qt/view">
+       <button>
+        <div className="flex items-center">
+          <FaDownload color={theme.iconColor}/>
+          <p className="ml-1 ">Download</p>
+        </div>
+        </button>
+       </Link>
       </div>
     </div>
   );
