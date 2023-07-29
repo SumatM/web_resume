@@ -47,7 +47,7 @@ const Arivu = () => {
         className="mt-3"
       >
         {/* head of project  */}
-        <Link target="_blank" href="https://marvelous-crack-5191.vercel.app/">
+        <Link target="_blank" href="https://puny-potato-4945.vercel.app/">
         <h1 className="text-base font-bold text-white">{"Coursera Clone (Arivu)"}</h1>
         </Link>
         {/* body of project  */}
