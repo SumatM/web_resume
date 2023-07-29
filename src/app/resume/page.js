@@ -37,12 +37,12 @@ export default function Home() {
   }
 
   return (
-    <div>
+    <div className=" pb-4" style={{background:'rgba(50, 49, 49, 0.374)'}}>
       {isLoading && <Loader />}
       <div
         ref={pageRef}
-        className=" m-auto  border-2 border-black overflow-hidden sm:w-[99vw] md:w-[90vw] lg:w-[80vw] xl:w-[70vw]"
-        style={{ visibility: isLoading ? "collapse" : "visible" }}
+        className=" m-auto  border-2 border-black overflow-hidden sm:w-[99vw] md:w-[90vw] lg:w-[80vw] xl:w-[70vw] bg-white"
+        style={{ visibility: isLoading ? "collapse" : "visible",boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px" }}
       >
         <div
           style={{
