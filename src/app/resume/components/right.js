@@ -87,7 +87,7 @@ const Right = () => {
             <h1 className="text-base font-bold text-white">
               B.Sc. Chemistry Hounours
             </h1>
-            <p className="text-xs font-bold  ">Himachal Pradesh University</p>
+            <p className="text-xs font-bold  ">Goverment College Nagrota Bagwan</p>
             <p className="text-xs italic">June, 2013 - May, 2016</p>
           </div>
         </div>
